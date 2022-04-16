@@ -22,6 +22,10 @@ app.use(expressValidator());
 
 // routes
 
+app.get("/testing", (req, res) => {
+  res.json({ message: "Api up and running !!!" });
+});
+
 app.use("/users", require("./routes/user"));
 
 // error handling middleware
